@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Projects</title>
+    <style>
+        .flashcard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .flashcard {
+            width: 250px;
+            height: 350px;
+            perspective: 1000px;
+        }
+
+        .flashcard-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flashcard:hover .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front,
+        .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flashcard-front {
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .flashcard-back {
+            background-color: #2c3e50;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .flashcard-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .flashcard-description {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .flashcard-link {
+            font-size: 14px;
+            text-decoration: none;
+            color: #1abc9c;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flashcard-container">
+        <!-- Flashcard 1 -->
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img class="flashcard-image" src="chat.jpeg" alt="Full Stack AI Email SaaS Application">
+                    <div class="flashcard-title">Mern Real Time Chat App</div>
+                    <div class="flashcard-description">Build and deploy an real time Chat application.</div>
+                </div>
+                <div class="flashcard-back">
+                    <a class="flashcard-link" href="https://youtu.be/ntKkVrQqBYY?si=TTXVTUGPOpDQM7FO" target="_blank">Watch Tutorial</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Flashcard 2 -->
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img class="flashcard-image" src="f.jpeg" alt="AI SaaS Platform with Next.js 13">
+                    <div class="flashcard-title">Food Delivery App using React JS</div>
+                    <div class="flashcard-description">Create an Food Delivery App and Deploy it.</div>
+                </div>
+                <div class="flashcard-back">
+                    <a class="flashcard-link" href="https://youtu.be/9jRTo7ILxQc?si=Fdzo56oyyqIGzyaJ" target="_blank">Watch Tutorial</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Flashcard 3 -->
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img class="flashcard-image" src="interview.jpeg" alt="Full Stack AI Marketing Platform SaaS">
+                    <div class="flashcard-title">Full Stack AI Mock Interview </div>
+                    <div class="flashcard-description">Build an AI-driven Mock Interview Platform using Next JS.</div>
+                </div>
+                <div class="flashcard-back">
+                    <a class="flashcard-link" href="https://youtu.be/Q5LM985yUmQ?si=KAhUl9kuKYcS2kEF" target="_blank">Watch Tutorial</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Flashcard 4 -->
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img class="flashcard-image" src="short.jpeg" alt="AI SaaS Platform with Next.js and React">
+                    <div class="flashcard-title">AI Short Video Generator Platform with Next.js and React</div>
+                    <div class="flashcard-description">Develop a full-stack AI SaaS platform using Next.js and React.</div>
+                </div>
+                <div class="flashcard-back">
+                    <a class="flashcard-link" href="https://youtube.com/playlist?list=PLaBeGKL1tOU3Gl_x2EzOMPPpAWq9znZWt&si=kSu4cYpyU_qAFV63" target="_blank">Watch Tutorial</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Flashcard 5 -->
+        <div class="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img class="flashcard-image" src="job.jpeg" alt="AI App Development in 30 Minutes">
+                    <div class="flashcard-title">Mern Job Portal with Admin Pannel</div>
+                    <div class="flashcard-description">Quickly develop a full-stack AI application using MERN Stack.</div>
+                </div>
+                <div class="flashcard-back">
+                    <a class="flashcard-link" href="https://youtu.be/u6vPo9DOR0Y?si=8tWKnfcegGYVT0GM" target="_blank">Watch Tutorial</a>
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+    
+
+<div class="container">
+    <h1>Java Projects</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>GitHub Repository</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Password Generator using Java</td>
+                <td><a href="https://github.com/KZarzour/Password-Generator" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Online Survey System</td>
+                <td><a href="https://github.com/kodekracker/Online-Survey-System" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Online Resume Builder</td>
+                <td><a href="https://github.com/meetakbari/CV-Resume-Builder" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Snake Game using Java</td>
+                <td><a href="https://github.com/janbodnar/Java-Snake-Game" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Data Visualization Software</td>
+                <td><a href="https://github.com/gavalian/groot" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Electricity Billing System</td>
+                <td><a href="https://github.com/Adarsh9616/Electricity_Billing_System" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Web Medical Management System</td>
+                <td><a href="https://github.com/mokarrom/medical-center" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Supply Chain Management System</td>
+                <td><a href="https://github.com/sonnyhcl/Backend" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Exam Seating Arrangement System in Java</td>
+                <td><a href="https://github.com/chabedalam11/Exam-Seating-Arrangement-System-Using-JSP-Servlet" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Wordcount Tools in Java</td>
+                <td><a href="https://github.com/lucassrg/javawc" target="_blank">View Project</a></td>
+            </tr>
+            <!-- New Projects Added Below -->
+        </tbody>
+    </table>
+    
+    <!-- Core Java Projects Section -->
+    <h2>Core Java Projects</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>GitHub Repository</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Create a Consumer Relationship Management System</td>
+                <td><a href="https://github.com/machowina/CRM" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>bFit Cognitive and Memory Testing Game</td>
+                <td><a href="https://github.com/Dk35840/bFit-A-Cognitive-Game" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Network Packet Sniffer Analyzer Software</td>
+                <td><a href="https://github.com/HassanAdamm/packet-sniffer" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Internet Service Provider Automation System</td>
+                <td><a href="https://github.com/nitishr7/ISP-Java" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Create a Criminal Face Detection System</td>
+                <td><a href="https://github.com/prasadus92/Face-Recognition" target="_blank">View Project</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- React Projects Section -->
+    <h2>React Projects</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>GitHub Repository</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>React Notes Application</td>
+                <td><a href="https://github.com/paydendyer/react-notes-app" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Pokemon App using PokeAPI</td>
+                <td><a href="https://github.com/Megh2507/Pokemon-App" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Weather Application</td>
+                <td><a href="https://github.com/topics/react-weather-app" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Cryptocurrency Application</td>
+                <td><a href="https://github.com/Megh2507/React-Crypto-App" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Password Generator</td>
+                <td><a href="https://github.com/Megh2507/react_password_generator" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Photo Gallery Application</td>
+                <td><a href="https://github.com/chrisblakely01/react-node-photo-gallery" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Chat Application</td>
+                <td><a href="https://github.com/WebDevSimplified/Whatsapp-Clone" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>React Movie and Series Application</td>
+                <td><a href="https://github.com/piyush-eon/react-entertainment-hub" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Instagram Clone</td>
+                <td><a href="https://github.com/topics/instagram-clone" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>E-Commerce Application</td>
+                <td><a href="https://github.com/meabhisingh/mernProjectEcommerce" target="_blank">View Project</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Full Stack Projects</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>GitHub Repository</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>To-do List Project</td>
+            <td><a href="https://github.com/snyk-labs/nodejs-goof" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Blog Website/App</td>
+            <td><a href="https://github.com/rajaraodv/react-redux-blog" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Chat Application/Website</td>
+            <td><a href="https://github.com/raineroviir/react-redux-socketio-chat" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Portfolio Website</td>
+            <td><a href="https://github.com/adrianhajdin/portfolio_website" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Food Delivery Application/Website</td>
+            <td><a href="https://github.com/fahadahmed07/react-js-quick-food-delivery-website" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>E-commerce Website/App</td>
+            <td><a href="https://github.com/django-oscar/django-oscar" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Video Conferencing App/Website</td>
+            <td><a href="https://github.com/itstaranarora/video-chat-v1" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Social Media App/Website</td>
+            <td><a href="https://github.com/CharlyKeleb/SocialMedia-App" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Content Management Tool/System for Blogs</td>
+            <td><a href="https://github.com/mahmudahsan/pythonbangla.com" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Project Management Tool</td>
+            <td><a href="https://github.com/JordanKnott/taskcafe" target="_blank">View Project</a></td>
+        </tr>
+    </tbody>
+</table>
+<h2>Data Science Projects</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>GitHub Repository</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fake News Detection Using Python</td>
+            <td><a href="https://github.com/nishitpatel01/Fake_News_Detection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Detecting Forest Fire</td>
+            <td><a href="https://github.com/Skar0/fire-detection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Detection of Road Lane Lines</td>
+            <td><a href="https://github.com/amusi/awesome-lane-detection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Sentimental Analysis</td>
+            <td><a href="https://github.com/yashspr/sentiment_analysis_ml_part" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Speech Recognition through the Emotions</td>
+            <td><a href="https://github.com/topics/speech-emotion-recognition" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Gender Detection and Age Prediction</td>
+            <td><a href="https://github.com/smahesh29/Gender-and-Age-Detection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Developing Chatbots</td>
+            <td><a href="https://github.com/parulnith/Building-a-Simple-Chatbot-in-Python-using-NLTK" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Detection of Drowsiness in Drivers</td>
+            <td><a href="https://www.interviewbit.com/blog/data-science-projects/" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Diabetic Retinopathy</td>
+            <td><a href="https://github.com/rsk97/Diabetic-Retinopathy-Detection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Detection of Credit Card Fraud</td>
+            <td><a href="https://github.com/curiousily/Credit-Card-Fraud-Detection-using-Autoencoders-in-Keras" target="_blank">View Project</a></td>
+        </tr>
+    </tbody>
+</table>
+<h2>C++ Projects</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>GitHub Repository</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bookshop Management System Using C++</td>
+            <td><a href="https://github.com/aryan-khanijo/Bookshop-Management-System-CPP-Project" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Bank Management System In C++</td>
+            <td><a href="https://github.com/wkhaliddev/Bank-Management/tree/master/DSAproject" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Student Record Management System</td>
+            <td><a href="https://github.com/Code-Recursion/Student-Record-Management-System" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Contact Management System Using C++</td>
+            <td><a href="https://github.com/JeremyWu917/ContactManagementSystem" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Car Rental System In C++</td>
+            <td><a href="https://github.com/Ellie-Y/CarRentalSystem" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Credit Card Validator</td>
+            <td><a href="https://github.com/karancodes/credit-card-validator" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Sudoku Game</td>
+            <td><a href="https://github.com/AlexIzydorczyk/sudoku" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Trading Application Project In C++</td>
+            <td><a href="https://github.com/JulyIghor/QtBitcoinTrader" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Casino Number Guessing Game</td>
+            <td><a href="https://github.com/KevinVillania/Baccarat-Casino-Number-Game" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Sales Management System</td>
+            <td><a href="https://github.com/whoeverxd/sales" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Face Detection App with C++</td>
+            <td><a href="https://github.com/elador/FeatureDetection" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Digital Calculator</td>
+            <td><a href="https://github.com/christopher-siewert/cpp-calculator" target="_blank">View Project</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Machine Learning Projects</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>GitHub Repository</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Home Value Prediction Project</td>
+            <td><a href="https://github.com/Shreyas3108/house-price-prediction" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Sales Prediction Project</td>
+            <td><a href="https://github.com/storieswithsiva/Kaggle-Predicting-Future-Sales" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Music Recommendation System Project</td>
+            <td><a href="https://github.com/ugis22/music_recommender" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Black Friday Sales Prediction</td>
+            <td><a href="https://github.com/nanthasnk/Black-Friday-Sales-Prediction" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Stock Prices Predictor with the help of TimeSeries</td>
+            <td><a href="https://github.com/huseinzol05/Stock-Prediction-Models" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Predicting Wine Quality with the help of Wine Quality Dataset</td>
+            <td><a href="https://github.com/amberkakkar01/Prediction-of-Wine-Quality" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>MNIST Handwritten Digit Classification</td>
+            <td><a href="https://github.com/anujdutt9/Handwritten-Digit-Recognition-using-Deep-Learning" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Myers-Briggs Personality Prediction</td>
+            <td><a href="https://github.com/DiegoUsaiUK/Market_Basket_Analysis" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Market Basket Analysis</td>
+            <td><a href="https://github.com/DiegoUsaiUK/Market_Basket_Analysis" target="_blank">View Project</a></td>
+        </tr>
+        <tr>
+            <td>Text Summarisation</td>
+            <td><a href="https://github.com/ebenso/TextSummarizer" target="_blank">View Project</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #008cba;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Content section */
+.content {
+    margin: 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+.content ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #008cba;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: #008cba;
+}
+
+.content ul li a:hover {
+    text-decoration: underline;
+    color: #008cba;
+}
+
+/* Project sections */
+.project-section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.project-section ul {
+    list-style-type: none;
+}
+
+.project-section ul li {
+    margin-bottom: 10px;
+    color: #008cba;
+}
+
+.project-section ul li a {
+    text-decoration: none;
+    color: #333;
+    color: #008cba;
+}
+
+.project-section ul li a:hover {
+    color: #008cba;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
